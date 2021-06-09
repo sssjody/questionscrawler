@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.questionscrawler.dao.QuestionDao">
+    <insert id="insertQuestion" parameterType="com.example.questionscrawler.bean.QuestionItem">
+        insert into question_item (question_title,question_options,question_url,answer,point)
+        values (#{questionTitle},#{questionOptions},#{questionUrl},#{answer},#{point})
+    </insert>
+</mapper>
